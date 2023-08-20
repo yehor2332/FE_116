@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  max-width: 370px;
+  height: 500px;
+  background: gray;
+  display: flex;
+  align-items: flex-start;
+}
+form {
+display: flex;
+flex-direction: column;
+gap: 28px;
+}
+form span {
+  width: 100px;
+  display: block;
+  float: left;
+}
+form button {
+  width: 120px;
+}
+div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+div.true {
+  margin: 5px 0;
+}
+div.btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
