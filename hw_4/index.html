@@ -7,27 +7,27 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<form class="container" action="#" method="post" name="contact"autocomplete="on">
+<form class="container" action="#" method="post" name="contact" autocomplete="on">
   <label><span>Повне ім'я</span>
-    <input type="text" name="fullname" required placeholder="">
+    <input type="text" name="fullname" required>
   </label>
   <label><span>E-Mail</span>
-    <input type="email" name="email" required placeholder="">
+    <input type="email" name="email" required>
   </label>
   <label><span>Пароль</span>
-    <input type="password" name="password" required placeholder="">
+    <input type="password" name="password" required>
   </label>
   <label><span>Підтвердження паролю</span>
-    <input type="password" name="password" required placeholder="">
+    <input type="password" name="password" required>
   </label>
-  <label><span>Стать</span>
-    <input type="radio" id="male" name="sex" required placeholder="" value="male">
+  <div><span>Стать</span>
+    <input type="radio" id="male" name="sex" required value="male">
     <label for="male">Чоловіча</label>
-    <input type="radio" id="female" name="sex" required placeholder="" value="female">
+    <input type="radio" id="female" name="sex" required value="female">
     <label for="female">Жіноча</label>
-  </label>
+  </div>
   <label><span>Вік</span>
-    <input type="number" name="age" required placeholder="">
+    <input type="number" name="age" required>
   </label>
   <label><span>Курс</span>
     <select>
@@ -38,14 +38,14 @@
       <option>QA Manual</option>
     </select>
   </label>
-  <label>
     <label><span>Повна адреса проживання</span>
       <textarea id="textarea" name="message" required placeholder="Краіна, регіон, місто/ селище, вулиця" cols="30"></textarea>
     </label>
-    <label><br><br>
+    <div class="true">
       <input id="html" type="checkbox">
-      <label for="html">Я погоджуюсь з обробкою персональних даних</label><br><br>
-  <div>
+      <label for="html">Я погоджуюсь з обробкою персональних даних</label>
+    </div>
+  <div class="btn">
     <button type="reset">Очистити форму</button>
     <button type="submit">Зареєструватися</button>
   </div>
