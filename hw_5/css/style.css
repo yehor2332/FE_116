@@ -120,13 +120,20 @@
   margin: 0 auto;
 }
 .wrapper main .features {
+  background-image: url("../img/bg.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 100%;
+}
+.wrapper main .features div.container {
+  padding-bottom: 74px;
   margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.wrapper main .features h2 {
+.wrapper main .features div.container h2 {
   color: #2F281E;
   text-align: center;
   font-family: Montserrat;
@@ -135,26 +142,19 @@
   font-weight: 700;
   line-height: normal;
 }
-.wrapper main .features .gradient {
-  height: 380px;
-  width: 100%;
-  border-radius: 0 0 600px 600px/0 0 202px 202px;
-  background-image: linear-gradient(to top, #ffe5d2, #ffe9e5, #fff0f4, #fef8fd, #ffffff);
-  border-top: 0 solid #FFFFFF;
-}
-.wrapper main .features .gradient .lists {
+.wrapper main .features div.container .lists {
   display: flex;
   justify-content: space-between;
   margin: 50px 120px 0 120px;
   gap: auto;
 }
-.wrapper main .features .gradient .lists .list {
+.wrapper main .features div.container .lists .list {
   margin-bottom: 70px;
 }
-.wrapper main .features .gradient .lists .list img {
+.wrapper main .features div.container .lists .list img {
   margin-bottom: 30px;
 }
-.wrapper main .features .gradient .lists .list h4 {
+.wrapper main .features div.container .lists .list h4 {
   color: #2F281E;
   font-family: Montserrat;
   font-size: 22px;
@@ -162,7 +162,7 @@
   font-weight: 600;
   line-height: normal;
 }
-.wrapper main .features .gradient .lists .list p {
+.wrapper main .features div.container .lists .list p {
   color: #544837;
   font-family: Montserrat;
   font-size: 16px;
@@ -170,12 +170,7 @@
   font-weight: 500;
   line-height: 26px;
 }
-.wrapper main .features .gradient .btnfeatures {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.wrapper main .features .gradient .btnfeatures button {
+.wrapper main .features div.container button {
   display: flex;
   width: 180px;
   height: 50px;
@@ -194,7 +189,7 @@
   font-weight: 700;
   line-height: normal;
 }
-.wrapper main .features .gradient .btnfeatures button:hover {
+.wrapper main .features div.container button:hover {
   border: 1px solid #BCD0E5;
   background-color: white;
   color: #2F281E;
@@ -417,3 +412,5 @@ footer .form button:hover {
   background-color: white;
   color: #2F281E;
 }
+
+/*# sourceMappingURL=style.css.map */
