@@ -1,0 +1,256 @@
+@font-face {
+  font-family: "Tourney";
+  src: url("../fonts/Tourney-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Staatliches";
+  src: url("../fonts/Staatliches-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Francois One";
+  src: url("../fonts/FrancoisOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Farro";
+  src: url("../fonts/Farro-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #000;
+  font-family: Staatliches;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.66px;
+  text-decoration: none;
+}
+.header ul a {
+  color: #000;
+  font-family: Staatliches;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.66px;
+  text-decoration: none;
+}
+.header .img {
+  display: flex;
+  margin-left: auto;
+}
+.header .eng {
+  color: #000;
+  font-family: "Tourney";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 1.32px;
+  text-decoration: none;
+  border: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+main .introduction {
+  margin: 70px auto;
+}
+main .introduction h2 {
+  color: #000;
+  font-family: "Francois One";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+}
+main .introduction h2 .chapter {
+  color: #000;
+  vertical-align: super;
+  font-family: "Farro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  text-transform: capitalize;
+}
+main .introduction p {
+  margin-top: 40px;
+  color: #000;
+  font-family: PT Sans;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+}
+main .introduction p i {
+  color: #000;
+  font-family: PT Sans;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  text-decoration-line: underline;
+}
+main .core {
+  margin: 70px auto;
+}
+main .core h2 {
+  color: #000;
+  font-family: "Francois One";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+}
+main .core h2 .chapter {
+  color: #000;
+  vertical-align: super;
+  font-family: "Farro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  text-transform: capitalize;
+}
+main .core p {
+  margin-top: 40px;
+  color: #000;
+  font-family: "PT Sans";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+}
+main .core p i {
+  color: #000;
+  font-family: PT Sans;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 48px;
+}
+main .react {
+  margin: 70px auto;
+}
+main .react h2 {
+  color: #000;
+  font-family: "Francois One";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+}
+main .react h2 .chapter {
+  color: #000;
+  vertical-align: super;
+  font-family: "Farro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
+main .react p {
+  color: #000;
+  font-family: PT Sans;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  margin-bottom: 40px;
+}
+main .react p .i {
+  color: #000;
+  font-family: PT Sans;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  text-decoration-line: underline;
+}
+main .react p .margin {
+  margin-bottom: 0;
+}
+main .react span {
+  color: #000;
+  font-family: PT Sans;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+}
+main .hand .chapter {
+  color: #000;
+  vertical-align: super;
+  font-family: "Farro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 1.2px;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
+main .hand h2 {
+  color: #000;
+  font-family: "Francois One";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+}
+main p {
+  color: #000;
+  font-family: PT Sans;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  margin-top: 40px;
+}
+main p i {
+  color: #000;
+  font-family: PT Sans;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 48px;
+}
