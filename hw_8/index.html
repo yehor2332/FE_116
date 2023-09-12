@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hw_8</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header class="header container">
+    <select class="eng">
+      <option disabled="disabled" selected="selected">LANG</option>
+      <option>ENG</option>
+      <option>DE</option>
+      <option>UKR</option>
+    </select>
+    <ul>
+      <li><a href="#">Documentation</a></li>
+      <li><i>/</i></li>
+      <li><a href="#">Who's using</a></li>
+    </ul>
+    <a class="img" href="/"><img src="./img/logo.svg" class="logo" alt="logo"></a>
+  </header>
+  <main class="container">
+    <img src="img/bg-picture.png" alt="background">
+    <section class="sitebar containerleft">
+      <div class="bar">
+        <ul>
+          <li><a href="#">Introduction</a></li>
+          <li><a href="#">core components</a></li>
+          <li><a href="#">react fundamentals</a></li>
+          <li><a href="#">handling text input</a></li>
+        </ul>
+      </div>
+    </section>
+    <div class="sectionright">
+      <section class="introduction containerright">
+        <hr>
+        <h2>Introduction<span class="chapter">Chapter 1</span></h2>
+        <p>Welcome to the very start of your React Native journey! If you're looking for environment setup instructions,
+          they've moved to <i>their own section</i>. Continue reading for an introduction to the documentation, Native
+          Components, React, and more!</p>
+      </section>
+      <section class="core containerright">
+        <hr>
+        <h2>core components<span class="chapter">Chapter 2</span></h2>
+        <p>React Native is an open source framework for building Android and iOS applications using React and the app
+          platform’s native capabiles. With React Native, you use JavaScript to access your platform’s APIs as well as
+          to describe the appearance and behavior of your UI using React components: <i>bundles of reusable, nestable
+            code.</i> You can learn more about React in the next section. But first, let’s cover how components work in
+          React Native.</p>
+      </section>
+      <section class="react containerright">
+        <hr>
+        <h2>react fundamentals<span class="chapter">Chapter 3</span></h2>
+        <p>React Native runs on <i class="i">React</i>, a popular open source library for building user interfaces with
+          JavaScript. To make the most of React Native, it helps to understand React itself. This section can get you
+          started or can serve as a refresher course.</p>
+        <p>We’re going to cover the core concepts behind React:</p>
+        <p><span>+ components.</span><i>The rest of this introduction to React uses cats in its examples: friendly,
+            approachable creatures that need names and a cafe to work in.</i></p>
+        <p><span>+ JSX.</span><i>React and React Native use JSX, a syntax that lets you write elements inside JavaScript
+            like so: <Text>Hello, I am your cat!</Text>.</i></p>
+        <p>The React docs have <i class="i">a comprehensive guide to JSX</i> you can refer to learn even more. Because
+          JSX is JavaScript, you can use variables inside it. Here you are declaring a name for the cat, name, and
+          embedding it with curly braces inside <Text></Text></p>
+        <p><span>+ props.</span><i>Props is short for “properties”.</i></p>
+        <p class="margin"><span>+ state.</span><i>While you can think of props as arguments you use to configure how
+            components render, state is like a component’s personal data storage. State is useful for handling data that
+            changes over time or that comes from user interaction. State gives your components memory!</i></p>
+      </section>
+      <section class="hand containerright">
+        <hr>
+        <h2>react fundamentals<span class="chapter">Chapter 3</span></h2>
+        <p>TextInput is a Core Component that allows the user to enter text. It has an <i>onChangeText</i>prop that
+          takes a function to be called every time the text changed, and an onSubmitEditing prop that takes a function
+          to be called when the text is submitted.</p>
+        <p>For example, let's say that as the user types, you're translating their words into a different language. In
+          this new language, every single word is written the same way: 🍕. So the sentence "Hello there Bob" would be
+          translated as "🍕 🍕".</p>
+      </section>
+    </div>
+  </main>
+  <footer class="footer container">
+      <h2>Who’s using</h2>
+    <div class="wrapp">
+      <div class="card">
+        <div class="front"><span><img src="img/front/facebook.png" alt=""></span></div>
+        <div class="back"><span><img src="img/back/facebook.png" alt=""></span></div>
+      </div>
+      <div class="card">
+        <div class="front"><span><img src="img/front/instagram.png" alt=""></span></div>
+        <div class="back"><span><img src="img/back/instagram.png" alt=""></span></div>
+      </div>
+      <div class="card">
+        <div class="front"><span><img src="img/front/shopifyhover.png" alt=""></span></div>
+        <div class="back"><span><img src="img/back/shopifyhover.png" alt=""></span></div>
+      </div>
+      <div class="card">
+        <div class="front"><span><img src="img/front/skype.png" alt=""></span></div>
+        <div class="back"><span><img src="img/back/skype.png" alt=""></span></div>
+      </div>
+      <div class="card">
+        <div class="front"><span><img src="img/front/pinterest.png" alt=""></span></div>
+        <div class="back"><span><img src="img/back/pinterest.png" alt=""></span></div>
+      </div>
+      <div class="card">
+        <div class="front"><span><img src="img/front/wix.png" alt=""></span></div>
+        <div class="back"><span><img src="img/back/wix.png" alt=""></span></div>
+      </div>
+      <div class="card">
+        <div class="front"><span><img src="img/front/saleforse.png" alt=""></span></div>
+        <div class="back"><span><img src="img/back/saleforse.png" alt=""></span></div>
+      </div>
+      <div class="card">
+        <div class="front"><span><img src="img/front/soundcloud.png" alt=""></span></div>
+        <div class="back"><span><img src="img/back/soundcloud.png" alt=""></span></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
