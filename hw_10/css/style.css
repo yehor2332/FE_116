@@ -4,6 +4,12 @@
   max-width: 1170px;
   margin: 0 auto;
   background: #F7F7F7;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   gap: 30px;
 }
 
@@ -15,7 +21,6 @@ body {
 }
 body .form {
   width: 570px;
-  height: 590px;
   background: #FFF;
   display: flex;
   flex-direction: column;
@@ -63,10 +68,11 @@ label .email p {
   letter-spacing: -0.1px;
 }
 
-input {
+input, select {
   padding-left: 10px;
   display: flex;
   width: 245px;
+  box-sizing: border-box;
   height: 38px;
   justify-content: center;
   align-items: center;
@@ -74,11 +80,11 @@ input {
   border: 1px solid #545454;
   border-radius: 5px;
 }
-input:focus {
+input:focus, select:focus {
   border: 1px solid #007BFF;
   outline: unset;
 }
-input::placeholder {
+input::placeholder, select::placeholder {
   font-weight: bold;
   opacity: 0.5;
   color: #545454;
@@ -110,7 +116,6 @@ select::placeholder {
   align-items: center;
   position: relative;
   width: 245px;
-  height: 67px;
 }
 .select-wrapper select {
   color: #545454;
@@ -170,9 +175,12 @@ select::placeholder {
 }
 
 .privacy {
-  width: 410px;
-  height: 36px;
   margin-bottom: 41px;
+}
+.privacy .account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .privacy p {
   color: #969696;
@@ -297,17 +305,4 @@ button {
   border: 1px solid #E4E4E4;
 }
 
-.wrapper1 .item {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.wrapper1 .items {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-.wrapper1 .btn {
-  width: 150px;
-  height: 38px;
-}
+/*# sourceMappingURL=style.css.map */

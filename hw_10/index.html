@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="container">
+<body>
+<div class="content container">
   <form class="form">
     <h1>Create an Account</h1>
     <div class="wrapper">
@@ -33,6 +34,7 @@
         <div class="check"></div> Female
       </label>
     </div>
+    <div class="wrapper">
       <label>Country
         <div class="select-wrapper">
           <select>
@@ -43,16 +45,19 @@
           </select>
           <img src="img/pictures/arrows-select.svg" alt="">
         </div>
-        <label>
-          City
-          <input type="text" name="City" placeholder="City">
-        </label>
       </label>
+      <label>
+        City
+        <input type="text" name="City" placeholder="City">
+      </label>
+    </div>
     <button class="btn">Sign Up</button>
     <div class="privacy">
       <p>By clicking the 'Sign Up' button, you confirm that you accept our <a href="#">Terms of Use</a> and <a class="link" href="#">Privacy Policy</a></p>
-      <a class="havent" href="">Have an account?</a>
-      <a class="login" href="">Log In</a>
+      <div class="account">
+        <a class="havent" href="">Have an account?</a>
+        <a class="login" href="">Log In</a>
+      </div>
     </div>
   </form>
   <form class="form">
@@ -68,46 +73,45 @@
         <p>Up to 1 MB (300x300 px)</p>
       </div>
     </div>
-    <div class="wrapper1">
-      <div class="item">
-        <div class="items">
-          <label>
-            Name
-            <input type="text" name="first_name" placeholder="First Name ">
-          </label>
-          <label>
-            E-mail
-            <input type="text" name="last_name" placeholder="Last Name">
-          </label>
-        </div>
-        <div class="items">
-          <div class="select-wrapper">
-            <select>
-              <option>Select</option>
-              <option>Ukraine</option>
-              <option>Germany</option>
-              <option>England</option>
-            </select>
-            <img src="img/pictures/arrows-select.svg" alt="">
-          </div>
-            City
-            <input type="text" name="last_name" placeholder="Last Name">
-          </label>
-        </div>
-        <div class="items">
-          <label>
-            Zip Code
-            <input type="text" name="first_name" placeholder="First Name ">
-          </label>
-          <label>
-            Phone Number
-            <input type="text" name="last_name" placeholder="Last Name">
-          </label>
-        </div>
-      </div>
-      <button class="btn">Update</button>
+    <div class="wrapper">
+      <label>
+        Name
+        <input type="text" name="first_name" placeholder="First Name ">
+      </label>
+      <label>
+        E-mail
+        <input type="text" name="last_name" placeholder="Last Name">
+      </label>
     </div>
+    <div class="wrapper">
+      <label>Country
+        <div class="select-wrapper">
+          <select>
+            <option>Select</option>
+            <option>Ukraine</option>
+            <option>Germany</option>
+            <option>England</option>
+          </select>
+          <img src="img/pictures/arrows-select.svg" alt="">
+        </div>
+      </label>
+      <label>
+        City
+        <input type="text" name="last_name" placeholder="Last Name">
+      </label>
+    </div>
+    <div class="wrapper">
+      <label>
+        Zip Code
+        <input type="text" name="first_name" placeholder="First Name ">
+      </label>
+      <label>
+        Phone Number
+        <input type="text" name="last_name" placeholder="Last Name">
+      </label>
+    </div>
+    <button class="btn">Update</button>
   </form>
+</div>
 </body>
-
 </html>
