@@ -196,16 +196,38 @@ select {
   letter-spacing: -0.1px;
   border: 1px solid #007BFF;
   border-radius: 5px;
-  margin-top: 20px;
 }
 
 .privacy {
   margin-bottom: 41px;
+  .paragraph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .account {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    .account_links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+    &::before {
+      content: '';
+      display: inline;
+      vertical-align: middle;
+      align-items: center;
+      justify-content: center;
+      background: #E4E4E4;
+      width: 500px;
+      height: 1px;
+    }
   }
 
   p {
@@ -219,10 +241,9 @@ select {
     font-weight: 400;
     line-height: 18px;
     letter-spacing: -0.1px;
-
   }
-
   a {
+    color: #007BFF;
     text-align: center;
     font-family: Inter;
     font-size: 13px;
@@ -230,20 +251,6 @@ select {
     font-weight: 400;
     line-height: 18px;
     letter-spacing: -0.1px;
-    text-decoration: unset;
-  }
-
-  .link {
-    &::after {
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      align-items: center;
-      justify-content: center;
-      background: #E4E4E4;
-      width: 500px;
-      height: 1px;
-    }
   }
 }
 
