@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-  background: #F7F7F7;
+  background: #E4E4E4;
 }
 
 .content {
@@ -19,16 +19,26 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: #E4E4E4;
 
   .form {
-    width: 570px;
+    min-height: 590px;
+    height: auto;
+    max-width: 570px;
+    width: 100%;
     background: #FFF;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 35px 35px 0 35px;
     border-radius: 10px;
-    gap: 20px 20px;
+    gap: 20px;
+  }
+  .form_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
   }
 
   h1 {
@@ -199,6 +209,8 @@ select {
   }
 
   p {
+    max-width: 395px;
+    width: 100%;
     color: #969696;
     text-align: center;
     font-family: Roboto;
@@ -211,7 +223,6 @@ select {
   }
 
   a {
-    color: #007BFF;
     text-align: center;
     font-family: Inter;
     font-size: 13px;
@@ -247,12 +258,12 @@ select {
   font-weight: 400;
   line-height: 22px;
   letter-spacing: -0.2px;
+  text-decoration: unset;
 }
 
 .login {
   width: 41px;
   height: 22px;
-  color: #007BFF;
   font-family: Roboto;
   font-size: 15px;
   font-style: normal;
@@ -260,6 +271,7 @@ select {
   line-height: 22px;
   letter-spacing: -0.1px;
   text-decoration: unset;
+  color: #007BFF;
 }
 
 .profile {
@@ -325,11 +337,22 @@ select {
   grid-area: text;
 }
 
-button {
-  width: 30px;
-  height: 30px;
-  background: #FFFFFF;
+.btnprofile {
+  display: flex;
+  width: 150px;
+  height: 38px;
+  justify-content: center;
+  align-items: center;
+  background-color: #007BFF;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px; 
+  letter-spacing: -0.1px;
+  border: 1px solid #007BFF;
   border-radius: 5px;
-  border: 1px solid #E4E4E4;
 }
 
