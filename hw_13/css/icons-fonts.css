@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('../fonts/icons.eot');
+  src:  url('../fonts/icons.eot') format('embedded-opentype'),
+    url('../fonts/icons.ttf') format('truetype'),
+    url('../fonts/icons.woff') format('woff'),
+    url('../fonts/icons.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"], [class*=" _icon-"] {
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-facebook:before {
+  content: "\e900";
+  font-size: 50px;
+  padding: 10px;
+  color: #565656;
+}
+._icon-instagram:before {
+  content: "\e901";
+  font-size: 50px;
+  padding: 10px;
+  color: #565656;
+}
+._icon-linkedin:before {
+  content: "\e902";
+  font-size: 50px;
+  padding: 10px;
+  color: #565656;
+}
+._icon-twitter:before {
+  content: "\e903";
+  font-size: 50px;
+  padding: 10px;
+  color: #565656;
+}
