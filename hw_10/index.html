@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HW_10_Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="content container">
+  <form class="form">
+    <h1>Create an Account</h1>
+    <div class="wrapper">
+      <label>
+        First Name
+        <input type="text" name="first_name" placeholder="First Name ">
+      </label>
+      <label>
+        Last Name
+        <input type="text" name="last_name" placeholder="Last Name">
+      </label>
+    </div>
+    <label>
+      E-mail
+      <input class="email" type="email" placeholder="E-mail">
+      <p>We'll never share your email with anyone else.</p>
+    </label>
+    <div class="radio wrapper">
+      <label><input type="radio" name="radio">
+        <div class="check"></div> Male
+      </label>
+      <label><input type="radio" name="radio">
+        <div class="check"></div> Female
+      </label>
+    </div>
+    <div class="wrapper">
+      <label>Country
+        <div class="select-wrapper">
+          <select>
+            <option>Select</option>
+            <option>Ukraine</option>
+            <option>Germany</option>
+            <option>England</option>
+          </select>
+          <img src="img/pictures/arrows-select.svg" alt="">
+        </div>
+      </label>
+      <label>
+        City
+        <input type="text" name="City" placeholder="City">
+      </label>
+    </div>
+    <button class="btn">Sign Up</button>
+    <div class="privacy">
+      <div class="paragraph">
+      <p>By clicking the 'Sign Up' button, you confirm that you accept our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+    </div>
+      <div class="account">
+        <div class="account_links">
+        <a class="havent" href="">Have an account?</a>
+        <a class="login" href="">Log In</a>
+      </div>
+      </div>
+    </div>
+  </form>
+  
+  <form class="form">
+    <div class="form_wrapper">
+    <div class="section1">
+      <h1>Profile</h1>
+      <div class="profile">
+        <img src="img/userpic.svg" alt="userpic">
+        <div class="input">
+          <input class="input_profile" type="text">
+          <img class="img_inpute_profile" src="img/camera.svg" alt="upload">
+        </div>
+        <button type="reset"><img class="img" src="img/trash.svg" alt=""></button>
+        <p>Up to 1 MB (300x300 px)</p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <label>
+        Name
+        <input type="text" name="first_name" placeholder="First Name ">
+      </label>
+      <label>
+        E-mail
+        <input type="text" name="last_name" placeholder="Last Name">
+      </label>
+    </div>
+    <div class="wrapper">
+      <label>Country
+        <div class="select-wrapper">
+          <select>
+            <option>Select</option>
+            <option>Ukraine</option>
+            <option>Germany</option>
+            <option>England</option>
+          </select>
+          <img src="img/pictures/arrows-select.svg" alt="">
+        </div>
+      </label>
+      <label>
+        City
+        <input type="text" name="last_name" placeholder="Last Name">
+      </label>
+    </div>
+    <div class="wrapper">
+      <label>
+        Zip Code
+        <input type="text" name="first_name" placeholder="First Name ">
+      </label>
+      <label>
+        Phone Number
+        <input type="text" name="last_name" placeholder="Last Name">
+      </label>
+    </div>
+    <button class="btnprofile">Update</button>
+  </div>
+  </form>
+</div>
+</body>
+</html>
