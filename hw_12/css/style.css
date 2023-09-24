@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,600;1,6..12,600&family=Quicksand:wght@500&family=Roboto:ital@0;1&display=swap");
 .container {
   width: 100%;
@@ -157,4 +158,10 @@ body footer .social ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
+=======
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+>>>>>>> fc2192652a533908ebd63721a80b8bd316bfeeae
 }
