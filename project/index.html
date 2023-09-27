@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/section.css">
+</head>
+<body class="light_dark_theme">
+<main>
+  <section class="info">
+    <img src="img/img_section_info.png" alt="statistic-image">
+    <div class="content">
+      <div class="left">
+        <h2><span>$</span>1 tril 
+          <p>Market cap potential</p>
+        </h2>
+        <h2><span>$</span>3.65 mil 
+          <p>Deposited to platform</p>
+        </h2>
+        <h2><span>$</span>12
+          <p>Stablecoins</p>
+        </h2>
+      </div>
+      <div class="right">
+        <p>Solis group is a new venture created with investments from and collaboration with XBTO International, XBTO Ventures and Phil Potter, formerly of bitfinex. Stablehouse is intended to launch a first-of-its-kind clearing house for stablecoins that seeks to promote the next phase of the market’s development.</p>
+        <br /><br />
+        <p>The API-enabled, centralized platform addresses the key issues of inconsistent liquidity, stability and accessibility which are currently preventing the stablecoin market from reaching critical mass. </p>
+        <button>Contact sales</button>
+      </div>
+    </div>
+  </section>
+  <button id="switch">Dark/Light</button>
+  <script>
+    document.querySelector('#switch').addEventListener('click', function() {
+      document.querySelector('body').classList.toggle('light_dark_theme');
+    })
+  </script>
+</main>
+</body>
+</html>
