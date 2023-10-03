@@ -48,7 +48,9 @@ body main .info .content .left h2 {
   flex-direction: column;
   align-items: center;
 }
-body main .info .content .left h2 .symbol {
+body main .info .content .left h2:before {
+  content: " $";
+  margin-right: 10px;
   color: #E4E4E4;
   text-align: center;
   font-family: Playfair Display;

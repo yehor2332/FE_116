@@ -45,8 +45,10 @@ main {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    .symbol {
-                        color: #E4E4E4;
+                    &:before {
+                        content: ' \0024';
+                        margin-right: 10px;
+                        color:  #E4E4E4;
                         text-align: center;
                         font-family: Playfair Display;
                         font-size: 40px;
