@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&display=swap");
-* {
-  box-sizing: border-box;
-}
-
 .container {
   max-width: 1170px;
   width: 100%;
@@ -43,12 +39,15 @@ body .first header nav ul li a {
   letter-spacing: 1.12px;
   text-decoration: unset;
 }
-body .first header nav ul li a:hover:after {
+body .first header nav ul li a:after {
   content: "";
   display: block;
   width: 100%;
   height: 3px;
   opacity: 0.3;
+  background: rgba(0, 0, 0, 0);
+}
+body .first header nav ul li a:hover:after {
   background: #F1897B;
 }
 body .first .first_content {
@@ -246,7 +245,7 @@ body main .wrapper_benefits_items .item span {
   line-height: 48px;
 }
 body main .section_qoute {
-  background-image: url("../img/section_quote-bg");
+  background-image: url("../img/section_quote-bg.png");
   background-repeat: no-repeat;
   background-size: 100% 1170px;
   width: 100%;
@@ -287,3 +286,5 @@ body.light_dark_theme main .info .content .right button {
 body.light_dark_theme main .info .content .right button:after {
   background: #53F3CD;
 }
+
+/*# sourceMappingURL=style.css.map */
