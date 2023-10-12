@@ -8,11 +8,12 @@
 }
 body {
     .first {
-        background-image: url("../img/bg.png");
+        background-image: url("../img/header_bg.png");
         background-repeat: no-repeat;
         background-size: 100% 1028px;
         padding-top: 30px;
         width: 100%;
+        max-width: 100%;
         height: 1028px;
         header {
             margin-top: 30px;
@@ -23,8 +24,12 @@ body {
             height: 100%;
             background: linear-gradient(270deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.24) 24.1%, rgba(255, 255, 255, 0.00) 47.19%), rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(4.5px);
-            nav {
-                ul {
+            .section_header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                nav {
+                    ul {
                     display: flex;
                     gap: 30px;
                     li {
@@ -52,14 +57,14 @@ body {
                     }
                 }
             }
+            }
         }
         .first_content {
+            padding-top: 174px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-            margin-top: 150px;
-            margin-left: 135px;
             h2 {
                 max-width: 523px;
                 color: #262A3F;
@@ -260,6 +265,38 @@ main {
         width: 100%;
         max-height: 400px;
         height: 100%;
+        margin-bottom: 120px;
+    }
+    .section_video_menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .video {
+            padding: 31px 70px 31px 30px;
+            border-radius: 32px;
+            border: 1px solid #E4E4E4;
+            iframe {
+                border-radius: 8px;
+                opacity: 0.2;
+                background: url(./img/video.png), lightgray 0px -252.131px / 100% 193.74% no-repeat;
+            }
+            .svg_button {
+                stroke-width: 1px;
+                stroke: #E4E4E4;
+                position: relative;
+                top: -127px;
+                left: 35px;
+            }
+            .svg_camera {
+                stroke-width: 1px;
+                stroke: #E4E4E4;
+                position: relative;
+                top: -147px;
+                left: -15px;
+            }
+        }
+        
+
     }
 }
 }

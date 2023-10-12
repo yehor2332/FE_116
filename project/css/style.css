@@ -8,11 +8,12 @@
 }
 
 body .first {
-  background-image: url("../img/bg.png");
+  background-image: url("../img/header_bg.png");
   background-repeat: no-repeat;
   background-size: 100% 1028px;
   padding-top: 30px;
   width: 100%;
+  max-width: 100%;
   height: 1028px;
 }
 body .first header {
@@ -25,11 +26,16 @@ body .first header {
   background: linear-gradient(270deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.24) 24.1%, rgba(255, 255, 255, 0) 47.19%), rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(4.5px);
 }
-body .first header nav ul {
+body .first header .section_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .first header .section_header nav ul {
   display: flex;
   gap: 30px;
 }
-body .first header nav ul li a {
+body .first header .section_header nav ul li a {
   color: #262A3F;
   font-family: Lato;
   font-size: 14px;
@@ -39,7 +45,7 @@ body .first header nav ul li a {
   letter-spacing: 1.12px;
   text-decoration: unset;
 }
-body .first header nav ul li a:after {
+body .first header .section_header nav ul li a:after {
   content: "";
   display: block;
   width: 100%;
@@ -47,16 +53,15 @@ body .first header nav ul li a:after {
   opacity: 0.3;
   background: rgba(0, 0, 0, 0);
 }
-body .first header nav ul li a:hover:after {
+body .first header .section_header nav ul li a:hover:after {
   background: #F1897B;
 }
 body .first .first_content {
+  padding-top: 174px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-top: 150px;
-  margin-left: 135px;
 }
 body .first .first_content h2 {
   max-width: 523px;
@@ -251,6 +256,36 @@ body main .section_qoute {
   width: 100%;
   max-height: 400px;
   height: 100%;
+  margin-bottom: 120px;
+}
+body main .section_video_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .section_video_menu .video {
+  padding: 31px 70px 31px 30px;
+  border-radius: 32px;
+  border: 1px solid #E4E4E4;
+}
+body main .section_video_menu .video iframe {
+  border-radius: 8px;
+  opacity: 0.2;
+  background: url(./img/video.png), lightgray 0px -252.131px/100% 193.74% no-repeat;
+}
+body main .section_video_menu .video .svg_button {
+  stroke-width: 1px;
+  stroke: #E4E4E4;
+  position: relative;
+  top: -127px;
+  left: 35px;
+}
+body main .section_video_menu .video .svg_camera {
+  stroke-width: 1px;
+  stroke: #E4E4E4;
+  position: relative;
+  top: -147px;
+  left: -15px;
 }
 
 body.light_dark_theme {
@@ -286,5 +321,3 @@ body.light_dark_theme main .info .content .right button {
 body.light_dark_theme main .info .content .right button:after {
   background: #53F3CD;
 }
-
-/*# sourceMappingURL=style.css.map */
