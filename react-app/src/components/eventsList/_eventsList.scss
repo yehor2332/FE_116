@@ -1,0 +1,43 @@
+.events {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    .event {
+        display: flex;
+        border: 5px solid black;
+        border-radius: 2%;
+        a {
+            text-decoration: none;
+        }
+        p {
+            text-decoration: unset;
+            color: #424242;
+            font-family: 'DM Sans';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        h2 {
+            color: #424242;
+            font-family: 'DM Sans';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        h3 {
+            color: #424242;
+            font-family: 'DM Sans';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal; 
+        }
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+}
