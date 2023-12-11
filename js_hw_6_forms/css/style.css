@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form h2 {
+  margin: 0;
+}
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+form label:nth-child(6) {
+  flex-direction: row;
+  align-items: center;
+}
+form label:nth-child(6) input {
+  width: 40px;
+  height: 40px;
+}
+form input {
+  width: 400px;
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  outline: unset;
+  margin: 0;
+}
+form p.error {
+  color: red;
+}
+form input.error {
+  border-color: red;
+}
+form textarea.error {
+  border-color: red;
+}
+form select.error {
+  border-color: red;
+}
+form textarea {
+  width: 400px;
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  outline: unset;
+  height: 80px;
+  margin: 0;
+}
+form select {
+  width: 400px;
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  outline: unset;
+  margin: 0;
+}
+form button {
+  width: 400px;
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  outline: unset;
+  margin: 0;
+}

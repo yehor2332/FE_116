@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'icons-socials';
+    src: url('fonts/icons-socials.eot?jevmz8');
+    src: url('fonts/icons-socials.eot?jevmz8#iefix') format('embedded-opentype'), url('fonts/icons-socials.ttf?jevmz8') format('truetype'), url('fonts/icons-socials.woff?jevmz8') format('woff'), url('fonts/icons-socials.svg?jevmz8#icons-socials') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="header"],
+[class*=" header"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icons-socials' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.headerclock-footer:before {
+    content: "\e903";
+}
+
+.headerinbox-footer:before {
+    content: "\e904";
+}
+
+.headerlocation-footer:before {
+    content: "\e905";
+}
+
+.headerphone-footer:before {
+    content: "\e906";
+}
+
+.headerfacebook:before {
+    content: "\e900";
+}
+
+.headerinstagram:before {
+    content: "\e901";
+}
+
+.headertwitter:before {
+    content: "\e902";
+}

@@ -41,3 +41,32 @@
         }
     }
 }
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    .form-items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        input: {
+            border: 1px solid #fff;
+            border-radius: 5px;
+        }
+        button {
+            color: #fff;
+            font-family: "DM Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            border-radius: 50px;
+            border: 1.5px solid #FFF;
+            background: linear-gradient(119deg, #ED4690 -2.11%, #52C 63.58%);
+            width: 101px;
+            padding: 10px 20px;
+        }
+    }
+}

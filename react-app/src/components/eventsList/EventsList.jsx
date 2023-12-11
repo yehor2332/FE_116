@@ -3,6 +3,7 @@ import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 import '../../assets/scss/style.scss'
+
 const baseURL = "https://app.ticketmaster.com";
 const allEvents = "/discovery/v2/events";
 const apiKey = "2T27tMWdUxVkDgVWQo7PcVHhuYZ6qYeV";
@@ -11,9 +12,16 @@ const locale = "*";
 const countryCode = "DE";
 
 function EventsList () {
-  const [events, setEvents] = useState(null);
-  const [error, setError] = useState(null);
   useEffect(() => {
+    document.title = 'Events';
+},[]);
+  
+  const [events, setEvents] = useState(null);
+  const [search, setSearch] = useState('');
+  const [error, setError] = useState(null);
+
+  function searchEvent (e) {
+    e.preventDefault();
     axios.get(baseURL + allEvents, {
       params: {
         apikey : apiKey,
@@ -22,13 +30,35 @@ function EventsList () {
       }})
         .then(response => {
             setEvents(response.data._embedded.events);
-            console.log(response.data._embedded.events);
         })
         .catch(error => {
           setError(error.response.message);
-          console.log(error);
         })
+    
+  }
+
+  function getEvents () {
+    axios.get(baseURL + allEvents, {
+    params: {
+      apikey : apiKey,
+      locale : locale,
+      countryCode : countryCode,
+    }})
+      .then(response => {
+          setEvents(response.data._embedded.events);
+      })
+      .catch(error => {
+        setError(error.response.message);
+      })
+  }
+  
+  useEffect(() => {
+    getEvents();
   }, []);
+  useEffect(() => {
+    getEvents();
+  }, []);
+
   if (error)  {
     return <div className="error">
       <h2>{error}</h2>
@@ -45,10 +75,29 @@ function EventsList () {
           </Link>
         </div>
     );
-    return <div className="events">
+    return (
+    <>
+    <form 
+      onSubmit={searchEvent}
+      className="search" >
+      <div className="form-items" 
+    >
+      <input 
+      type="text"
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+      />
+      <button type="submit">Search</button>
+      </div>
+    </form>
+    <div className="events">
       {items}
     </div>;
+    </>
+    )
   }
+
+
 } 
 export default EventsList;
 

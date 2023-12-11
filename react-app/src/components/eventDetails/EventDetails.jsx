@@ -31,7 +31,7 @@ function EventDetails () {
         }
         useEffect( () => {
             fetchData(eventId)
-        }, [event]);
+        }, []);
     
     if (error) {
         return (
