@@ -12,10 +12,6 @@ const locale = "*";
 const countryCode = "DE";
 
 function EventsList () {
-  useEffect(() => {
-    document.title = 'Events';
-},[]);
-  
   const [events, setEvents] = useState(null);
   const [search, setSearch] = useState('');
   const [error, setError] = useState(null);
@@ -27,6 +23,7 @@ function EventsList () {
         apikey : apiKey,
         locale : locale,
         countryCode : countryCode,
+        keyword: search
       }})
         .then(response => {
             setEvents(response.data._embedded.events);
@@ -51,13 +48,14 @@ function EventsList () {
         setError(error.response.message);
       })
   }
-  
+
+  useEffect(() => {
+    document.title = 'Events';
+  },[]);
   useEffect(() => {
     getEvents();
   }, []);
-  useEffect(() => {
-    getEvents();
-  }, []);
+
 
   if (error)  {
     return <div className="error">
@@ -96,10 +94,5 @@ function EventsList () {
     </>
     )
   }
-
-
 } 
 export default EventsList;
-
-
-
