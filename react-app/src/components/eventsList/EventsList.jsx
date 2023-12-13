@@ -26,10 +26,14 @@ function EventsList () {
         keyword: search
       }})
         .then(response => {
+          if (response.data._embedded) {
             setEvents(response.data._embedded.events);
+          } else {
+            setError('Data not found');
+          }
         })
         .catch(error => {
-          setError(error.response.message);
+          console.log(error)
         })
     
   }
