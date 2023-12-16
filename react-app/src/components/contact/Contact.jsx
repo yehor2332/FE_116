@@ -1,11 +1,15 @@
 import ContactForm from "../contactForm/ContactForm";
 import { useEffect } from 'react';
+import '../../assets/scss/style.scss';
 function Contact () {
     useEffect(() => {
         document.title = 'Contact';
     },[]);
     return (
-        <ContactForm />
+        <div className="contact">
+            <ContactForm />
+        </div>
+
     )
 }
 

@@ -1,6 +1,7 @@
-import { useParams } from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import '../../assets/scss/style.scss';
 
 
 const baseURL = "https://app.ticketmaster.com";
@@ -41,13 +42,20 @@ function EventDetails () {
     } else if (event) {
         return (
             <div className="event">
-                <h2>{event.name}</h2>
-                <h3>{event.dates.timezone}</h3>
-                <p>{event.dates.start.localTime}</p>
-                <p>{event.dates.start.localDate}</p>
-                <img src={event.images[0].url} alt={event.images[0].url} />
+                <img src={event.images[2].url} alt={event.images[0].url} />
+                <div className="eventInfo">
+                    <h2>{event.name}</h2>
+                    <h3>
+                        <span>Category: </span>{event.classifications[0].segment.name}
+                    </h3>
+                    <h3><span>Date:</span> {event.dates.timezone}</h3>
+                    <p><span>Start:</span> {event.dates.start.localTime} {event.dates.start.localDate}</p>
+                    <button className="btnBuy"><Link to="/">Buy Ticket</Link></button>
                 </div>
+
+            </div>
         )
     }
 }
+
 export default EventDetails;

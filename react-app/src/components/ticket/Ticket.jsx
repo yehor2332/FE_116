@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
+import '../../assets/scss/style.scss';
 function Ticket () {
     useEffect(() => {
         document.title = 'Ticket';
     },[]);
     return (
-        <h1>Ticket</h1>
+        <div className="ticket"></div>
     )
 }
 

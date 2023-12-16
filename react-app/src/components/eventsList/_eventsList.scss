@@ -1,17 +1,29 @@
+.eventsList {
+    min-height: 720px;
+    background: linear-gradient(119deg, #ED4690 -2.11%, #52C 63.58%,);
+    overflow: hidden;
+}
 .events {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
     .event {
         display: flex;
-        border: 5px solid black;
+        justify-content: center;
+        align-items: flex-start;
+        border: 2px solid #ffd700;
         border-radius: 2%;
+        background: linear-gradient(119deg, #ED4690 -2.11%, #52C 63.58%,);
+        height: 350px;
+
         a {
             text-decoration: none;
         }
         p {
             text-decoration: unset;
-            color: #424242;
+            color: black;
             font-family: 'DM Sans';
             font-size: 20px;
             font-style: normal;
@@ -19,7 +31,7 @@
             line-height: normal;
         }
         h2 {
-            color: #424242;
+            color: black;
             font-family: 'DM Sans';
             font-size: 20px;
             font-style: normal;
@@ -27,7 +39,7 @@
             line-height: normal;
         }
         h3 {
-            color: #424242;
+            color: black;
             font-family: 'DM Sans';
             font-size: 20px;
             font-style: normal;
@@ -35,7 +47,7 @@
             line-height: normal; 
         }
         img {
-            width: 100%;
+            width: 400px;
             height: 300px;
             object-fit: cover;
         }
@@ -52,8 +64,13 @@
         justify-content: center;
         gap: 15px;
         input {
-            border: 1px solid red;
+            border: 1px solid #ffd700;
             border-radius: 5px;
+            height: 30px;
+            width: 200px;
+            font-size: 30px;
+            outline: none;
+            color: #ED4690;
         }
         button {
             color: #fff;
@@ -63,9 +80,8 @@
             font-weight: 500;
             line-height: normal;
             border-radius: 50px;
-            border: 1.5px solid #FFF;
             background: linear-gradient(119deg, #ED4690 -2.11%, #52C 63.58%);
-            width: 101px;
+            width: 150px;
             padding: 10px 20px;
         }
     }

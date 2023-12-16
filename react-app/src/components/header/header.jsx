@@ -2,7 +2,7 @@ import {useState}  from "react";
 import { Link } from "react-router-dom";
 import MainMenu from '../mainMenu/mainMenu';
 import Header_logo from './logo.png';
-import '../../assets/scss/style.scss'
+import '../../assets/scss/style.scss';
 const links = {
   class: 'main-menu',
   links: [

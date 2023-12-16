@@ -63,8 +63,10 @@ function footer () {
     <h2>Stay in the loop</h2>
     <p>Join our mailing list to stay in the loop with our newest for Event and concert</p>
     <div className={"buttonFooter"}>
-      <p>Enter your email address..</p>
-      <Link to="/"><button className={"button"}>Subscibe Now</button></Link>
+      <form action="">
+        <input placeholder="Enter your email address.." type="text" />
+        <Link to="/"><button type="submit" className={"button"}>Subscibe Now</button></Link>
+      </form>
     </div>
     </div>
     </div>
