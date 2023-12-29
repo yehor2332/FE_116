@@ -1,0 +1,88 @@
+.eventsList {
+    min-height: 720px;
+    background: linear-gradient(119deg, #ED4690 -2.11%, #52C 63.58%,);
+    overflow: hidden;
+}
+.events {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    .event {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        border: 2px solid #ffd700;
+        border-radius: 2%;
+        background: linear-gradient(119deg, #ED4690 -2.11%, #52C 63.58%,);
+        height: 350px;
+
+        a {
+            text-decoration: none;
+        }
+        p {
+            text-decoration: unset;
+            color: black;
+            font-family: 'DM Sans';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        h2 {
+            color: black;
+            font-family: 'DM Sans';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        h3 {
+            color: black;
+            font-family: 'DM Sans';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal; 
+        }
+        img {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    .form-items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        input {
+            border: 1px solid #ffd700;
+            border-radius: 5px;
+            height: 30px;
+            width: 200px;
+            font-size: 30px;
+            outline: none;
+            color: #ED4690;
+        }
+        button {
+            color: #fff;
+            font-family: "DM Sans";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            border-radius: 50px;
+            background: linear-gradient(119deg, #ED4690 -2.11%, #52C 63.58%);
+            width: 150px;
+            padding: 10px 20px;
+        }
+    }
+}

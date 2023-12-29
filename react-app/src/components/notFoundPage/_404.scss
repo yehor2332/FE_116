@@ -1,0 +1,41 @@
+.page-404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    min-height: 700px;
+    background-image: url('./img/404.jpg');
+    background-size: cover;
+    h1 {
+        font-family: 'Vina Sans', sans-serif;
+        font-size: 300px;
+        font-weight: 200;
+        color: #fff;
+        text-transform: uppercase;
+    }
+    h2 {
+        font-family: 'Vina Sans', sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    a {
+        margin-top: 20px;
+        font-family: 'Vina Sans', sans-serif;
+        display: inline-block;
+        font-weight: 700;
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+        padding: 13px 23px;
+        background: #ED4690;
+        font-size: 30px;
+        -webkit-transition: 0.2s all;
+        transition: 0.2s all;
+        border: 1px solid black;
+        border-radius: 50px;
+    }
+}
