@@ -44,40 +44,39 @@ const links = {
 
 const currentYear = new Date().getFullYear();
 
-function footer () {
-    return (
-    <footer className={'footer'}>
-      <div className={"footer-items"}>
-      <div className={'logo'}>
-    <Link to="/"><img src={footer_logo} alt="Logo" /></Link>
-    <p>Eventick is a global self-service ticketing platform for live experiences that allows anyone to create, share, find and attend events that fuel their passions and enrich their lives.</p>
-    <div className={'footer_social_medias'}>
-      <Link className={'_icon-facebook'} to="/"></Link>
-      <Link className={'_icon-instagram'} to="/"></Link>
-      <Link className={'_icon-twitter'} to="/"></Link>
-    </div>
-    </div>
-          <div className={'footer_links'}>
-              <FooterMenu links={links.links} class={links.class}/>
-              <div className="buttonForm">
-                  <h2>Stay in the loop</h2>
-                  <p>Join our mailing list to stay in the loop with our newest for Event and concert</p>
-                  <div className={"buttonFooter"}>
-                      <form action="">
-                          <input placeholder="Enter your email address.." type="text"/>
-                          <Link to="/">
-                              <button type="submit" className={"button"}>Subscibe Now</button>
-                          </Link>
-                      </form>
-                  </div>
-              </div>
+function footer() {
+  return (
+      <footer className={'footer'}>
+        <div className={"footer-items"}>
+          <div className={'logo'}>
+            <Link to="/"><img src={footer_logo} alt="Logo"/></Link>
+            <p>Eventick is a global self-service ticketing platform for live experiences that allows anyone to create,
+              share, find and attend events that fuel their passions and enrich their lives.</p>
+            <div className={'footer_social_medias'}>
+              <Link className={'_icon-facebook'} to="/"></Link>
+              <Link className={'_icon-instagram'} to="/"></Link>
+              <Link className={'_icon-twitter'} to="/"></Link>
+            </div>
           </div>
-      </div>
-        <div className={"copyright"}>
-            <p>Copyright © {currentYear} <Link to='/'>Eventick</Link> Global Corporation</p>
+          <FooterMenu links={links.links} class={links.class}/>
+          <div className="buttonForm">
+            <h2>Stay in the loop</h2>
+            <p>Join our mailing list to stay in the loop with our newest for Event and concert</p>
+            <div className={"buttonFooter"}>
+              <form action="">
+                <input placeholder="Enter your email address.." type="text"/>
+                <Link to="/">
+                  <button type="submit" className={"button"}>Subscibe Now</button>
+                </Link>
+              </form>
+            </div>
+          </div>
         </div>
-    </footer>
-    )
+        <div className={"copyright"}>
+          <p>Copyright © {currentYear} <Link to='/'>Eventick</Link> Global Corporation</p>
+        </div>
+      </footer>
+  )
 }
 
 export default footer;
