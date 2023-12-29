@@ -57,24 +57,26 @@ function footer () {
       <Link className={'_icon-twitter'} to="/"></Link>
     </div>
     </div>
-    <div className={'footer_links'}>
-    <FooterMenu links={links.links} class={links.class} />
-    <div className="buttonForm">
-    <h2>Stay in the loop</h2>
-    <p>Join our mailing list to stay in the loop with our newest for Event and concert</p>
-    <div className={"buttonFooter"}>
-      <form action="">
-        <input placeholder="Enter your email address.." type="text" />
-        <Link to="/"><button type="submit" className={"button"}>Subscibe Now</button></Link>
-      </form>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div className={"copyright"}>
-      <p>Copyright © {currentYear} <Link to='/'>Eventick</Link> Global Corporation</p>
-    </div>
-  </footer>
+          <div className={'footer_links'}>
+              <FooterMenu links={links.links} class={links.class}/>
+              <div className="buttonForm">
+                  <h2>Stay in the loop</h2>
+                  <p>Join our mailing list to stay in the loop with our newest for Event and concert</p>
+                  <div className={"buttonFooter"}>
+                      <form action="">
+                          <input placeholder="Enter your email address.." type="text"/>
+                          <Link to="/">
+                              <button type="submit" className={"button"}>Subscibe Now</button>
+                          </Link>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+        <div className={"copyright"}>
+            <p>Copyright © {currentYear} <Link to='/'>Eventick</Link> Global Corporation</p>
+        </div>
+    </footer>
     )
 }
 
