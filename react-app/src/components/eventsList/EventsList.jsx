@@ -86,7 +86,7 @@ function EventsList () {
             <h3>{event.dates.timezone}</h3>
             <p>{event.dates.start.localTime}</p>
             <p>{event.dates.start.localDate}</p>
-            <img src={event.images[0].url} alt={event.images[0].url} />
+            <img src={event.images[4].url} alt={event.images[0].url} />
           </Link>
         </div>
     );

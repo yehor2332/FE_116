@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import axios from "axios";
 import {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 
 const baseURL = "https://app.ticketmaster.com";
 const allEvents = "/discovery/v2/events";
@@ -32,14 +33,18 @@ function MainSlider () {
     return (
             <Swiper
                 modules={[Navigation]}
+                slidesPerView={1}
                 navigation={true}
             > {events.map((el) => <SwiperSlide key={el.id}>
                 <>
-                    <h2>{el.name}</h2>
-                    <h3>{el.dates.timezone}</h3>
-                    <p>{el.dates.start.localTime}</p>
-                    <p>{el.dates.start.localDate}</p>
                     <img src={el.images[5].url} alt=""/>
+                    <div className="swiperSlideInfo">
+                        <h2>{el.name}</h2>
+                        <h3>{el.dates.timezone}</h3>
+                        <p>{el.dates.start.localTime}</p>
+                        <p>{el.dates.start.localDate}</p>
+                        <button className="btnBuy"><Link to="/">Buy Ticket</Link></button>
+                    </div>
                 </>
             </SwiperSlide>)}
             </Swiper>)
