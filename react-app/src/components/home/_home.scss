@@ -1,6 +1,10 @@
-.homeSlider {
+.slider {
     min-height: 720px;
     background-image: url(./imgHome.png);
     background-repeat: no-repeat;
     background-size: cover;
+    .swiper-button-next, .swiper-button-prev {
+        --swiper-theme-color: #ff3c7b;
+        --swiper-navigation-size: 70px;
+    }
 }

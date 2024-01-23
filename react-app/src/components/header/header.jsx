@@ -33,20 +33,23 @@ function Header () {
     return (
     <header className={isActive ? 'header active' : 'header'}>
     <Link to="/"><img src={Header_logo} alt="Logo" /></Link>
-    <MainMenu links={links.links} class={links.class} />
-    <div className={'btns'}>
+      <div className={isActive ? 'menu active' : 'menu'}>
+        <MainMenu  links={links.links} class={links.class} />
+      </div>
+    <div className={isActive ? 'btns active' : 'btns'}>
       <button className={'register'}><Link to="/">Register</Link></button>
       <button className={'sign_in'}><Link to="/">Sign in</Link></button>
     </div>
-    <div 
-    className={isActive ? 'burger active' : 'burger'}
-    onClick={toggleClass}
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </header>
+        <div
+            className={isActive ? 'burger active' : 'burger'}
+            onClick={toggleClass}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+    </header>
     )
 }
 

@@ -5,14 +5,13 @@
 }
 .events {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     gap: 15px;
     .event {
         display: flex;
-        justify-content: center;
-        align-items: flex-start;
+        flex-direction: column;
         border: 2px solid #ffd700;
         border-radius: 2%;
         background: linear-gradient(119deg, #ED4690 -2.11%, #52C 63.58%,);
@@ -85,4 +84,10 @@
             padding: 10px 20px;
         }
     }
+}
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
 }

@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard, Autoplay,  } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import axios from "axios";
@@ -10,6 +10,7 @@ const baseURL = "https://app.ticketmaster.com";
 const allEvents = "/discovery/v2/events";
 const apiKey = "2T27tMWdUxVkDgVWQo7PcVHhuYZ6qYeV";
 const locale = "*";
+const sort = "date,asc";
 const countryCode = "DE";
 function MainSlider () {
     const [events, setEvents] = useState([]);
@@ -22,6 +23,7 @@ function MainSlider () {
                 apikey : apiKey,
                 locale : locale,
                 countryCode : countryCode,
+                sort : sort,
             }})
             .then(response => {
                 setEvents(response.data._embedded.events);
@@ -32,12 +34,15 @@ function MainSlider () {
     }, []);
     return (
             <Swiper
-                modules={[Navigation]}
+                modules={[Navigation, Keyboard, Autoplay]}
+                spaceBetween={50}
                 slidesPerView={1}
                 navigation={true}
+                keyboard={true}
+                //autoplay={true}
             > {events.map((el) => <SwiperSlide key={el.id}>
                 <>
-                    <img src={el.images[5].url} alt=""/>
+                    <img src={el.images[1].url} alt=""/>
                     <div className="swiperSlideInfo">
                         <h2>{el.name}</h2>
                         <h3>{el.dates.timezone}</h3>

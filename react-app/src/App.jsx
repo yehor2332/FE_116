@@ -36,7 +36,6 @@ function App() {
             <Route path="/how_It_Works" element={<HowItWorks />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
-
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Route>

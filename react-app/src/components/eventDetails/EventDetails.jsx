@@ -12,11 +12,12 @@ const locale = "*";
 
 function EventDetails () {
     const eventId = useParams().id;
+    console.log(eventId);
     const [event, setEvent] = useState(null);
     const [error, setError] = useState(null);
     
-    async function fetchData(id) {
-        axios.get(baseURL + Event + id, {
+    function fetchData(eventId) {
+        axios.get(baseURL + Event + eventId, {
             params: {
               apikey : apiKey,
               locale : locale,
@@ -26,7 +27,7 @@ function EventDetails () {
                   console.log(response.data);
               })
               .catch(error => {
-                setError(error.response.message);
+                setError(error.message);
                 console.log(error);
               })
         }
@@ -52,7 +53,6 @@ function EventDetails () {
                     <p><span>Start:</span> {event.dates.start.localTime} {event.dates.start.localDate}</p>
                     <button className="btnBuy"><Link to="/">Buy Ticket</Link></button>
                 </div>
-
             </div>
         )
     }

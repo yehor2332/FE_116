@@ -8,10 +8,8 @@ function Home () {
 },[]);
     return (
         <>
-            <div className="homeSlider">
-                <div className="slider">
-                    <MainSlider/>
-                </div>
+            <div className="slider">
+                <MainSlider/>
             </div>
         </>
 

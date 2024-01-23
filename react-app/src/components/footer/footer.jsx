@@ -65,9 +65,7 @@ function footer() {
             <div className={"buttonFooter"}>
               <form action="">
                 <input placeholder="Enter your email address.." type="text"/>
-                <Link to="/">
                   <button type="submit" className={"button"}>Subscibe Now</button>
-                </Link>
               </form>
             </div>
           </div>

@@ -1,6 +1,6 @@
 /*1 Створити масив «Список покупок». Кожен елемент масиву є об'єктом, який містить  
    назву продукту, кількість і куплений він чи ні, ціну за одиницю товару, сума. Написати кілька функцій для роботи з таким масивом:*/
-let shoppingList = [
+/*let shoppingList = [
   {
     name: 'Sugar',
     number: 2,
@@ -86,11 +86,14 @@ console.log(shoppingList);*/
   return newShoppingList
 }
 
+
+
+
 console.log(deleteProduct('Bread'));*/
 
 //3 Додавання покупки в список. Враховуй, що при додаванні покупки з уже існуючим в списку продуктом, необхідно збільшувати кількість в існуючій покупці, а не додавати нову. При цьому також повинна змінитися сума, наприклад, якщо ціна за одиницю 12, а кількості товарів стало 2, то сума буде 24.*/
 
-function addProduct(newProduct) {
+/*function addProduct(newProduct) {
   let foundProduct;
   for (const item of shoppingList) {
     if (item.name === newProduct.name) {
@@ -110,4 +113,7 @@ function addProduct(newProduct) {
 
 addProduct({name: "Bread", number: 2, price: 12, isPurchased: false});
 addProduct({name: "Milk", number: 1, price: 24, isPurchased: false});
-console.log(shoppingList);
+console.log(shoppingList);*/
+
+const isConfirm = confirm("Please confirm your reservation");
+console.log(isConfirm)

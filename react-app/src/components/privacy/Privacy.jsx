@@ -1,6 +1,9 @@
 function Privacy () {
     return (
-        <h1>Privacy</h1>
+        <>
+            <h1>Privacy</h1>
+        </>
+
     )
 }
 
