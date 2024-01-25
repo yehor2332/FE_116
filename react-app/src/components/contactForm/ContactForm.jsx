@@ -14,7 +14,7 @@ function ContactForm () {
   }
 
   return (
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className="contact-form" onSubmit={handleSubmit(onSubmit)}>
         <div className="form-item">
           <input
               className={errors.name ? 'error' : ''}

@@ -17,7 +17,7 @@ import Privacy from './components/privacy/Privacy';
 import Terms from './components/terms/Terms';
 import WishListPage from './components/wishListPage/WishListPage';
 import NotFoundPage from './components/notFoundPage/NotFoundPage';
-import SingUpForm from "./components/singUpForm/SingUpForm";
+import SingInForm from "./components/singInForm/SingInForm";
 
 
 function App() {
@@ -39,7 +39,7 @@ function App() {
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/wishlist" element={<WishListPage />} />
-            <Route path="/singUp" element={<SingUpForm />} />
+            <Route path="/singIn" element={<SingInForm />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Route>

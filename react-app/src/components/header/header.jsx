@@ -38,7 +38,7 @@ function Header () {
       </div>
     <div className={isActive ? 'btns active' : 'btns'}>
       <Link to="/"><button className={'register'}>Register</button></Link>
-      <Link to="/singUp"><button className={'sign_in'}>Sign in</button></Link>
+      <Link to="/singIn"><button className={'sign_in'}>Sign in</button></Link>
     </div>
         <div
             className={isActive ? 'burger active' : 'burger'}
