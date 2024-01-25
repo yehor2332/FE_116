@@ -15,7 +15,9 @@ import HelpCenter from './components/helpCenter/HelpCenter';
 import HowItWorks from './components/howItWorks/HowItWorks';
 import Privacy from './components/privacy/Privacy';
 import Terms from './components/terms/Terms';
+import WishListPage from './components/wishListPage/WishListPage';
 import NotFoundPage from './components/notFoundPage/NotFoundPage';
+import SingUpForm from "./components/singUpForm/SingUpForm";
 
 
 function App() {
@@ -36,6 +38,8 @@ function App() {
             <Route path="/how_It_Works" element={<HowItWorks />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/wishlist" element={<WishListPage />} />
+            <Route path="/singUp" element={<SingUpForm />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Route>

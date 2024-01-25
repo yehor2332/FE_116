@@ -19,6 +19,16 @@ function EventsList () {
   const [error, setError] = useState(null);
   const [total_pages, setTotalPages] = useState(1);
   const [page, setPage] = useState(1);
+  const [liked, setLiked] = useState(() => {
+      let items = [];
+      for (let i= 0; i < localStorage.length; i++) {
+          let key = localStorage.key(i);
+          if (!key.indexOf('event-')) {
+              items.push(Number(localStorage.getItem(key)));
+          }
+      }
+      return items;
+  });
 
   function setEventsPage(e, value) {
       setPage(value)
@@ -80,6 +90,21 @@ function EventsList () {
           setError(error.message);
         })
   }
+  const setWishList = (event) => {
+      event.preventDefault();
+      console.log(event.target.attributes.getNamedItem('data-id').value )
+      let id = Number(event.target.attributes.getNamedItem('data-id').value);
+      let isFavourited = liked.includes(id);
+      if(!isFavourited) {
+          let newItem = [...liked, id];
+          setLiked(newItem);
+          window.localStorage.setItem('event-'+id, id);
+      } else {
+          let newItem = liked.filter((saveId) => saveId !== id);
+          setLiked(newItem);
+          window.localStorage.removeItem('event-'+id, id);
+      }
+  }
 
   useEffect(() => {
     document.title = 'Events';
@@ -116,10 +141,13 @@ function EventsList () {
             <p>{event.dates.start.localDate}</p>
             <img src={event.images[4].url} alt={event.images[0].url}/>
           </Link>
-          <button>Купити</button>
+            <div className="buyOrWishList">
+                <button className="buy">Buy Ticket</button>
+                <button className="like" onClick={setWishList} data-id={event.id}>{liked.includes(event.id) ? 'dislike' : 'like'}</button>
+            </div>
         </div>
     );
-    return (
+      return (
         <>
           <form
               onSubmit={searchEvent}

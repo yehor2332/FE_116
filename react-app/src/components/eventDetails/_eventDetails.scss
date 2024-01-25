@@ -3,7 +3,6 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-image: url(./imgHome.png);
   background-repeat: no-repeat;
   background-size: cover;
   gap: 100px;
@@ -23,7 +22,7 @@
     color: #1f2129;
     padding-top: 35px;
     &:hover {
-      color: #ffd700;
+      color: rgba(85,34,204,100);
     }
   }
   h3 {
@@ -34,7 +33,7 @@
     margin-bottom: 35px;
     line-height: 1.2;
     &:hover {
-      color: #ffd700;
+      color: rgba(85,34,204,100);
     }
   }
   p {
@@ -45,31 +44,38 @@
     margin-bottom: 35px;
     line-height: 1.2;
     &:hover {
-      color: #ffd700;
+      color: rgba(85,34,204,100);
     }
   }
   .btnBuy {
-    background: linear-gradient(119deg, #ED4690 -2.11%, #52C 63.58%);
-    font-size: 15px;
-    font-weight: 700;
-    padding: 1em;
-    display: block;
-    text-transform: uppercase;
-    transition: background .2s ease;
-    text-align: center;
-    line-height: 1.2;
-    border-radius: 5px;
-    width: 200px;
+    letter-spacing: 1px;
+    font-size: 35px;
+    color: #fff;
+    background-color: #F5167E;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    min-width: 50px;
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: 0 4px 16px #ccc;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
     &:hover {
-      color: #ffd700;
+      background-color: rgba(85,34,204,100);
+    }
+    &:focus {
+      background-color: rgba(85,34,204,100);
     }
     a {
       font-family: 'DM Sans';
       color: #fff;
       text-decoration: none;
-      &:hover {
-        color: #ffd700;
-      }
     }
   }
 }

@@ -48,7 +48,7 @@ function MainSlider () {
                         <h3>{el.dates.timezone}</h3>
                         <p>{el.dates.start.localTime}</p>
                         <p>{el.dates.start.localDate}</p>
-                        <button className="btnBuy"><Link to="/">Buy Ticket</Link></button>
+                        <Link to="/"><button className="btnBuy">Buy Ticket</button></Link>
                     </div>
                 </>
             </SwiperSlide>)}

@@ -10,7 +10,14 @@
 @import '../../components/contact/contact';
 @import '../../components/eventDetails/eventDetails';
 @import '../../components/contactForm/contactForm';
+@import "../../components/singUpForm/singUpForm";
+@import "../../components/sortUpcomingsEvents/sortUpcomingsEvents";
 
 * {
   box-sizing: border-box;
+}
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
 }

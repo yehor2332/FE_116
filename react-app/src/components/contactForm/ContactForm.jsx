@@ -2,8 +2,13 @@
 import '../../assets/scss/style.scss';
 
 function ContactForm () {
-  const { handleSubmit, register, formState: { errors } } = useForm();
-
+    const {
+        register,
+        formState: {
+            errors,
+        },
+        handleSubmit,
+    } = useForm();
   function onSubmit(values) {
     console.log(values);
   }
@@ -42,10 +47,10 @@ function ContactForm () {
         </div>
         <div className="form-item">
           <input
-              className={errors.subject ? 'error' : ''}
+              className={errors.topicOfTheProblem ? 'error' : ''}
               type="text"
-              placeholder="Subject"
-              {...register("subject", {
+              placeholder="Topic of the problem"
+              {...register("topicOfTheProblem", {
                 required: "Required",
                 pattern: {
                   value: /(\w|\s|[\.\'-])+/,
@@ -53,7 +58,7 @@ function ContactForm () {
                 }
               })}
           />
-          <p className={'error-message'}>{errors.subject && errors.subject.message}</p>
+          <p className={'error-message'}>{errors.topicOfTheProblem && errors.topicOfTheProblem.message}</p>
         </div>
         <div className="form-item">
           <textarea
@@ -70,7 +75,7 @@ function ContactForm () {
           />
           <p className={'error-message'}>{errors.message && errors.message.message}</p>
         </div>
-        <button className="form-item" type="submit">Submit</button>
+        <button className="button-contact-form" type="submit">Submit</button>
       </form>
   )
 }

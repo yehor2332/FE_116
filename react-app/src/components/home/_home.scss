@@ -3,6 +3,10 @@
     background-image: url(./imgHome.png);
     background-repeat: no-repeat;
     background-size: cover;
+    @media (max-width: 430px) {
+        min-height: 520px;
+
+    }
     .swiper-button-next, .swiper-button-prev {
         --swiper-theme-color: #ff3c7b;
         --swiper-navigation-size: 70px;

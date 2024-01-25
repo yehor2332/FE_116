@@ -37,8 +37,8 @@ function Header () {
         <MainMenu  links={links.links} class={links.class} />
       </div>
     <div className={isActive ? 'btns active' : 'btns'}>
-      <button className={'register'}><Link to="/">Register</Link></button>
-      <button className={'sign_in'}><Link to="/">Sign in</Link></button>
+      <Link to="/"><button className={'register'}>Register</button></Link>
+      <Link to="/singUp"><button className={'sign_in'}>Sign in</button></Link>
     </div>
         <div
             className={isActive ? 'burger active' : 'burger'}
