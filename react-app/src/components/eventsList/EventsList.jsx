@@ -135,7 +135,7 @@ function EventsList () {
     const items = events.map((event, index) =>
         <div key={index} className="event">
           <Link to={"/events/" + event.id} className="link">
-            <h2>{event.name}</h2>
+            <h2>x{event.name}</h2>
             <h3>{event.dates.timezone}</h3>
             <p>{event.dates.start.localTime}</p>
             <p>{event.dates.start.localDate}</p>
