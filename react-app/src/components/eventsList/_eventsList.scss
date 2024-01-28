@@ -63,8 +63,8 @@
             margin: 20px 0;
             width: 100%;
             display: flex;
-            gap: 15px;
-            justify-content: space-around;
+            gap: 5px;
+            justify-content: center;
             .buy {
                 letter-spacing: 1px;
                 font-size: 25px;
@@ -89,30 +89,17 @@
                 }
             }
             .like{
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 letter-spacing: 1px;
-                font-size: 25px;
+                font-size: 55px;
                 color: #fff;
-                background-color: rgba(85,34,204,100);
-                font-family: "DM Sans";
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-                max-width: 100px;
-                width: 100%;
                 padding: 10px 20px;
-                box-shadow: 0 4px 16px #ccc;
                 padding: 10px 20px;
-                border: none;
-                border-radius: 50px;
                 outline: none;
                 cursor: pointer;
                 transition: 0.3s;
-                &:hover {
-                    background-color: #F5167E;
-                }
-                &:focus {
-                    background-color: #F5167E;
-                }
             }
         }
     }

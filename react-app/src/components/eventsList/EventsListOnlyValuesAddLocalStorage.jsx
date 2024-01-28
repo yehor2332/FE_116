@@ -5,7 +5,6 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import { Link } from "react-router-dom";
 import '../../assets/scss/style.scss'
-import './fonts/icons-font.css'
 
 const baseURL = "https://app.ticketmaster.com";
 const allEvents = "/discovery/v2/events";
@@ -25,7 +24,7 @@ function EventsList () {
       for (let i= 0; i < localStorage.length; i++) {
           let key = localStorage.key(i);
           if (!key.indexOf('event-')) {
-              items.push(String(key.replace('event-', '')));
+              items.push(String(localStorage.getItem(key)));
           }
       }
       return items;
@@ -92,25 +91,21 @@ function EventsList () {
           setError(error.message);
         })
   }
-  const setWishList = (event) => {
-      event.preventDefault();
-      let id = String((event.target.attributes.getNamedItem('data-id').value));
-      let isFavourited = liked.includes(id);
-      if(!isFavourited) {
-          let newItem = [...liked, id];
-          setLiked(newItem);
-          for (let i = 0; i < events.length; i++) {
-              if (events[i].id == id) {
-                  window.localStorage.setItem('event-'+id, JSON.stringify(events[i]));
-              }
-          }
-
-      } else {
-          let newItem = liked.filter((saveId) => saveId !== id);
-          setLiked(newItem);
-          window.localStorage.removeItem('event-'+id, id);
-      }
-  }
+    const setWishList = (event) => {
+        event.preventDefault();
+        console.log(event.target.attributes.getNamedItem('data-id').value )
+        let id = String(event.target.attributes.getNamedItem('data-id').value);
+        let isFavourited = liked.includes(id);
+        if(!isFavourited) {
+            let newItem = [...liked, id];
+            setLiked(newItem);
+            window.localStorage.setItem('event-'+id, id);
+        } else {
+            let newItem = liked.filter((saveId) => saveId !== id);
+            setLiked(newItem);
+            window.localStorage.removeItem('event-'+id, id);
+        }
+    }
 
   useEffect(() => {
     document.title = 'Events';
@@ -149,16 +144,15 @@ function EventsList () {
           </Link>
             <div className="buyOrWishList">
                 <button className="buy">Buy Ticket</button>
-                <div onClick={setWishList} data-id={event.id}
-                     className={liked.includes(event.id) ? 'like _icon-like-white' : 'like _icon-like-red'}></div>
+                <button className="like" onClick={setWishList} data-id={event.id}>{liked.includes(event.id) ? 'dislike' : 'like'}</button>
             </div>
         </div>
     );
       return (
-          <>
-              <form
-                  onSubmit={searchEvent}
-                  className="search" >
+        <>
+          <form
+              onSubmit={searchEvent}
+              className="search" >
             <div className="form-items">
               <input
                   type="text"

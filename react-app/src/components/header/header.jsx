@@ -1,8 +1,12 @@
 import {useState}  from "react";
 import { Link } from "react-router-dom";
 import MainMenu from '../mainMenu/mainMenu';
+import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
 import Header_logo from './logo.png';
 import '../../assets/scss/style.scss';
+
+import wishListImg from './img/wishList.svg'
+
 const links = {
   class: 'main-menu',
   links: [
@@ -32,23 +36,20 @@ function Header () {
   }
     return (
     <header className={isActive ? 'header active' : 'header'}>
-    <Link to="/"><img src={Header_logo} alt="Logo" /></Link>
       <div className={isActive ? 'menu active' : 'menu'}>
-        <MainMenu  links={links.links} class={links.class} />
+        <Link to="/"><img src={Header_logo} alt="Logo" /></Link>
+        <MainMenu onClose={() =>{setActive(false)}} isActive={isActive} links={links.links} class={links.class} />
       </div>
     <div className={isActive ? 'btns active' : 'btns'}>
-      <Link to="/"><button className={'register'}>Register</button></Link>
-      <Link to="/singIn"><button className={'sign_in'}>Sign in</button></Link>
+      <Link to="/wishlist"><img src={wishListImg} alt=""/></Link>
+      <Link to="/"><button>Register</button></Link>
+      <Link to="/singIn"><button>Sign in</button></Link>
     </div>
-        <div
-            className={isActive ? 'burger active' : 'burger'}
-            onClick={toggleClass}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
 
+      <div onClick={toggleClass} className={"mobile-btn"}>
+
+        {isActive ? <AiOutlineClose size={"55"}/> : <AiOutlineMenu size={"55"}/>}
+      </div>
     </header>
     )
 }

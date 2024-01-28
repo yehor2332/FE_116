@@ -1,5 +1,5 @@
 import {Link, useParams} from "react-router-dom";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import '../../assets/scss/style.scss';
 
@@ -15,6 +15,16 @@ function EventDetails () {
     console.log(eventId);
     const [event, setEvent] = useState(null);
     const [error, setError] = useState(null);
+    const [liked, setLiked] = useState(() => {
+        let items = [];
+        for (let i= 0; i < localStorage.length; i++) {
+            let key = localStorage.key(i);
+            if (!key.indexOf('event-')) {
+                items.push(Number(localStorage.getItem(key)));
+            }
+        }
+        return items;
+    });
     
     function fetchData(eventId) {
         axios.get(baseURL + Event + eventId, {
@@ -31,9 +41,27 @@ function EventDetails () {
                 console.log(error);
               })
         }
+
+    const setWishList = (event) => {
+        event.preventDefault();
+        console.log(event.target.attributes.getNamedItem('data-id').value )
+        let id = String(event.target.attributes.getNamedItem('data-id').value);
+        let isFavourited = liked.includes(id);
+        if(!isFavourited) {
+            let newItem = [...liked, id];
+            setLiked(newItem);
+            window.localStorage.setItem('event-'+id, id);
+        } else {
+            let newItem = liked.filter((saveId) => saveId !== id);
+            setLiked(newItem);
+            window.localStorage.removeItem('event-'+id, id);
+        }
+    }
+
         useEffect( () => {
             fetchData(eventId)
         }, []);
+
     
     if (error) {
         return (
@@ -52,6 +80,10 @@ function EventDetails () {
                     <h3><span>Date:</span> {event.dates.timezone}</h3>
                     <p><span>Start:</span> {event.dates.start.localTime} {event.dates.start.localDate}</p>
                     <button className="btnBuy"><Link to="/">Buy Ticket</Link></button>
+                    <button className="like"
+                            onClick={setWishList}
+                            data-id={event.id}
+                    >{liked.includes(event.id) ? 'dislike' : 'like'}</button>
                 </div>
             </div>
         )

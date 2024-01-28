@@ -1,26 +1,32 @@
 .event {
-  min-height: 740px;
+  margin: 0 auto;
+  max-height: 740px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
-  gap: 100px;
+  border: 2px solid #ED4690;
   img {
-    margin-top: 50px;
-    width: 640px;
-    height: 427px;
+    max-width: 640px;
+    width: 100%;
+    max-height: 427px;
+    height: 100%;
   }
 }
 .eventInfo {
-  margin-top: 90px;
+  border: 2px solid #ED4690;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
   h2 {
     font-family: 'DM Sans';
     font-size: 50px;
     font-weight: 700;
-    margin-bottom: 40px;
     color: #1f2129;
-    padding-top: 35px;
     &:hover {
       color: rgba(85,34,204,100);
     }
@@ -30,7 +36,6 @@
     font-size: 30px;
     color: #1f2129;
     font-weight: 500;
-    margin-bottom: 35px;
     line-height: 1.2;
     &:hover {
       color: rgba(85,34,204,100);
@@ -41,7 +46,6 @@
     font-size: 30px;
     color: #1f2129;
     font-weight: 700;
-    margin-bottom: 35px;
     line-height: 1.2;
     &:hover {
       color: rgba(85,34,204,100);
@@ -49,20 +53,22 @@
   }
   .btnBuy {
     letter-spacing: 1px;
-    font-size: 35px;
+    font-size: 15px;
     color: #fff;
     background-color: #F5167E;
     font-family: "DM Sans";
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    min-width: 50px;
+    max-width: 130px;
     width: 100%;
+    max-height: 50px;
+    height: 100%;
     padding: 10px 20px;
     box-shadow: 0 4px 16px #ccc;
     padding: 10px 20px;
     border: none;
-    border-radius: 50px;
+    border-radius: 40px;
     outline: none;
     cursor: pointer;
     transition: 0.3s;
@@ -79,3 +85,4 @@
     }
   }
 }
+

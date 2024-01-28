@@ -43,7 +43,7 @@ function MainSlider () {
             > {events.map((el) => <SwiperSlide key={el.id}>
                 <>
                     <img src={el.images[1].url} alt=""/>
-                    <div className="swiperSlideInfo">
+                    <div className="swiperSlideInfo container">
                         <h2>{el.name}</h2>
                         <h3>{el.dates.timezone}</h3>
                         <p>{el.dates.start.localTime}</p>
