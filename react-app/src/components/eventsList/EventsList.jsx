@@ -30,7 +30,6 @@ function EventsList () {
       }
       return items;
   });
-    console.log(liked);
 
   function setEventsPage(e, value) {
       setPage(value)
@@ -61,7 +60,7 @@ function EventsList () {
               }
             console.log(response);
           } else {
-            setError('Data not found ЧІНА!');
+            setError('Data not found');
           }
         })
         .catch(error => {

@@ -45,31 +45,10 @@
     .btns {
         display: flex;
         align-items: center;
-        gap: 20px;
-        a {
-            button {
-                color: rgba(85,34,204,100);
-                font-family: 'DM Sans';
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-                border-radius: 50px;
-                border: none;
-                min-width: 101px;
-                width: 100%;
-                padding: 10px 20px;
-                cursor: pointer;
-                transition: 0.3s;
-                &:hover {
-                    background-color: #F5167E;
-                    color: #fff;
-                }
-                &:focus {
-                    background-color: #F5167E;
-                    color: #fff;
-                }
-            }
+        gap: 30px;
+        padding: 0 20px;
+        &.active {
+            z-index: 20;
         }
     }
 }
@@ -86,9 +65,15 @@
 }
 @media (max-width: 900px) {
     .btns {
-        flex-direction: column;
+        flex-direction: row;
         padding: 10px 0;
         gap: 10px !important;
+        a {
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
     }
 }
 @media (max-width: 800px) {
@@ -105,7 +90,7 @@
                 justify-content: flex-start;
                 align-items: flex-start;
                 position: fixed;
-                padding: 0 10px;
+                padding: 20px 10px;
                 left: -100%;
                 right: 0;
                 top: 0;
@@ -113,7 +98,7 @@
                 width: 100%;
                 background: linear-gradient(119deg, #ED4690 -2.11%, #52C 63.58%);
                 border-bottom-right-radius: 10%;
-                height: 50vh;
+                height: 70vh;
                 z-index: 10;
                 transition: left 1s;
                 &.active {
@@ -173,11 +158,12 @@
 @media (max-width: 440px) {
     .ul {
         &.active {
+
             left: 0;
         }
     }
     .btns {
-        right: 86px;
+        right: 45px;
         a {
             button {
                 font-size: 30px !important;

@@ -5,7 +5,9 @@ import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai";
 import Header_logo from './logo.png';
 import '../../assets/scss/style.scss';
 
-import wishListImg from './img/wishList.svg'
+import wishListSvg from './img/wishList.svg';
+import basketSvg from  './img/basket.svg';
+import accountSvg from './img/account.svg';
 
 const links = {
   class: 'main-menu',
@@ -34,6 +36,9 @@ function Header () {
   function toggleClass () {
     setActive(!isActive);
   }
+  function notActiveBurger () {
+    setActive(false);
+  }
     return (
     <header className={isActive ? 'header active' : 'header'}>
       <div className={isActive ? 'menu active' : 'menu'}>
@@ -41,9 +46,9 @@ function Header () {
         <MainMenu onClose={() =>{setActive(false)}} isActive={isActive} links={links.links} class={links.class} />
       </div>
     <div className={isActive ? 'btns active' : 'btns'}>
-      <Link to="/wishlist"><img src={wishListImg} alt=""/></Link>
-      <Link to="/"><button>Register</button></Link>
-      <Link to="/singIn"><button>Sign in</button></Link>
+      <Link to="/wishlist"><img onClick={notActiveBurger} src={wishListSvg} alt=""/></Link>
+      <Link to="/singIn"><img onClick={notActiveBurger} src={accountSvg} alt=""/></Link>
+      <Link to="/"><img onClick={notActiveBurger} src={basketSvg} alt=""/></Link>
     </div>
 
       <div onClick={toggleClass} className={"mobile-btn"}>
