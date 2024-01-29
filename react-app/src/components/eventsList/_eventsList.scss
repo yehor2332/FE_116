@@ -1,0 +1,162 @@
+.eventsList {
+    min-height: 820px;
+    overflow: hidden;
+}
+.events {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+    gap: 15px;
+    .event {
+        min-height: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: unset;
+        border: 2px solid #ED4690;
+        border-radius: 2%;
+        width: 100%;
+        padding: 5px;
+        box-shadow: 0 4px 16px #ccc;
+        gap: unset;
+        a {
+            text-decoration: none;
+        }
+        p {
+            text-decoration: unset;
+            color: black;
+            font-family: 'DM Sans';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        h2 {
+            color: black;
+            font-family: 'DM Sans';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            min-height: 100px;
+        }
+        h3 {
+            color: black;
+            font-family: 'DM Sans';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            margin-top: 15px;
+        }
+        .buyOrWishList {
+            margin: 20px 0;
+            width: 100%;
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            .buy {
+                letter-spacing: 1px;
+                font-size: 25px;
+                color: #fff;
+                background-color: #F5167E;
+                font-family: "DM Sans";
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                box-shadow: 0 4px 16px #ccc;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 50px;
+                outline: none;
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover {
+                    background-color: rgba(85,34,204,100);
+                }
+                &:focus {
+                    background-color: rgba(85,34,204,100);
+                }
+            }
+            .like{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 1px;
+                font-size: 55px;
+                color: #fff;
+                padding: 10px 20px;
+                padding: 10px 20px;
+                outline: none;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: unset;
+    height: 80px;
+    .form-items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        input {
+            border: 1px solid #ED4690;
+            border-radius: 5px;
+            max-height: 50px;
+            height: 100%;
+            max-width: 300px;
+            width: 100%;
+            font-size: 30px;
+            outline: none;
+            color: rgba(85,34,204,100);
+        }
+        button {
+            letter-spacing: 1px;
+            font-size: 35px;
+            color: #fff;
+            background-color: #F5167E;
+            font-family: "DM Sans";
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            max-width: 200px;
+            width: 100%;
+            padding: 10px 20px;
+            box-shadow: 0 4px 16px #ccc;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            outline: none;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                background-color: rgba(85,34,204,100);
+            }
+            &:focus {
+                background-color: rgba(85,34,204,100);
+            }
+        }
+    }
+}
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}

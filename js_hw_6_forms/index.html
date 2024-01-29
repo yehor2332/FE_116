@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <form action="/form" method="get" name="main">
+    <label>
+      <h2>Full name</h2>
+      <input type="text" name="full_name">
+    </label>
+    <label>
+      <h2>Password</h2>
+      <input type="password" name="password">
+    </label>
+    <label>
+      <h2>Age</h2>
+      <input type="number" name="Age">
+    </label>
+    <label>
+      <h2>Message</h2>
+      <textarea name="message"></textarea>
+    </label>
+    <label>
+      <h2>Select</h2>
+      <select name="select">
+        <option value="value1">value 1</option>
+        <option value="value2" selected>value 2</option>
+        <option value="value3">value 3</option>
+      </select>
+    </label>
+    <label>
+      <input type="checkbox" checked name="agree">
+      <h2>privacy</h2>
+    </label>
+    <button type="submit">Send</button>
+  </form>
+    <script src="script.js"></script>
+</body>
+</html>

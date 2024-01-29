@@ -1,0 +1,142 @@
+.swiper {
+  margin: 0 auto;
+  width: 100%;
+  max-height: 600px;
+  height: 100%;
+  .swiper-wrapper{
+    @media (max-width: 540px) {
+      max-height: 800px;
+      height: 100%;
+    }
+  }
+  @media (max-width: 1024px) {
+    max-height: 900px;
+  }
+
+  .swiper-slide {
+    padding: 0 10px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      margin-top: 20px;
+      gap: 0;
+    }
+    img {
+      max-width: 640px;
+      width: 100%;
+      max-height: 427px;
+      height: 100%;
+      border-radius: 2%;
+      @media (max-width: 1024px) {
+        max-width: 840px;
+      }
+    }
+    .swiperSlideInfo {
+      @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      h2 {
+        font-family: 'DM Sans';
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        color: #fff;
+        padding-top: 35px;
+        @media (max-width: 540px) {
+          font-size: 80px;
+        }
+        @media (max-width: 1024px) {
+          font-size: 60px;
+          text-align: center;
+          padding-top: 0;
+          margin-bottom: 0;
+        }
+        &:hover {
+          color: #ffd700;
+        }
+      }
+      h3 {
+        font-family: 'DM Sans';
+        font-size: 30px;
+        color: #fff;
+        font-weight: 500;
+        margin-bottom: 35px;
+        line-height: 1.2;
+        @media (max-width: 1024px) {
+          font-size: 50px;
+          text-align: center;
+          margin-bottom: 0;
+        }
+        @media (max-width: 540px) {
+          font-size: 50px;
+        }
+        &:hover {
+          color: #ffd700;
+        }
+      }
+      p {
+        font-family: 'DM Sans';
+        font-size: 30px;
+        color: #fff;
+        font-weight: 700;
+        margin-bottom: 35px;
+        line-height: 1.2;
+        @media (max-width: 1024px) {
+          font-size: 50px;
+          text-align: center;
+          margin-bottom: 0;
+        }
+        &:hover {
+          color: #ffd700;
+        }
+      }
+    }
+  }
+  a {
+    font-family: 'DM Sans';
+    color: #fff;
+    &:hover {
+      color: #ffd700;
+    }
+    .btnBuy {
+      letter-spacing: 1px;
+      font-size: 35px;
+      color: #fff;
+      background-color: #F5167E;
+      font-family: "DM Sans";
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      max-width: 220px;
+      width: 100%;
+      padding: 10px 20px;
+      box-shadow: 0 4px 16px #ccc;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 50px;
+      outline: none;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background-color: rgba(85,34,204,100);
+        color: #ffd700;
+      }
+      &:focus {
+        background-color: rgba(85,34,204,100);
+      }
+      @media (max-width: 1024px) {
+        max-width: 300px;
+        max-height: 200px;
+        height: 100%;
+        font-size: 22px;
+      }
+    }
+  }
+
+}
